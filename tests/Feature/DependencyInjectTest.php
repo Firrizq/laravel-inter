@@ -15,7 +15,7 @@ class DependencyInjectTest extends TestCase
     /**
      * A basic feature test example.
      */
-    public function TestDependencyInject(){
+    public function TestDependencyInjection(){
         $foo = new foo();
         $bar = new bar($foo);
 
