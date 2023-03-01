@@ -32,6 +32,15 @@ class Laravelcommand extends Command
         $this->error("something went wrong");
         $this->line("Display this on the screen");
 
-        $this->line(print_r($this->options()). '' . print_r($this->arguments()));
+        // $this->line(print_r($this->options()). '' . print_r($this->arguments()));
+
+        $this->line($this->argument('argument'). " " . $this->option('opsi'));
+
+        $name = $this->ask("what is your name?");
+        $password = $this->secret("Input your password");
+
+        if($this->confirm("Do you want to continue?")){
+            $this->line($name . " " . $password);
+        }
     }
 }
