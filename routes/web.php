@@ -19,5 +19,9 @@ app()->singleton('tabungan', function(){
 });
 
 Route::get('/', function () {
-    return dd(app('tabungan'), app('tabungan'));
+    return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
