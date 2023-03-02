@@ -1,7 +1,10 @@
 <?php
 
 use App\Data\Tabungan;
+use App\Notifications\NewVisitor;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Notifications\Notifiable;
 
 /*
 |--------------------------------------------------------------------------
